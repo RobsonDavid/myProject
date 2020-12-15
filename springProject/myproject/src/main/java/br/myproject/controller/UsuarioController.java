@@ -29,7 +29,6 @@ public class UsuarioController {
      private UsuarioDAO dao;
  
      // métodos - pedidos usuários e devolver
- 
      @GetMapping("/all")
      public List<Usuario> listarTodos() {
          List<Usuario> lista = (List<Usuario>) dao.findAll();
@@ -44,7 +43,7 @@ public class UsuarioController {
          Usuario usuario = dao.findById(id).orElse(null);
  
          if (usuario != null) {
-             usuario.setPassword("******"); // troca informação só de memória
+             usuario.setPassword("*********"); // troca informação só de memória
              return ResponseEntity.ok(usuario); // 200 - achou e volta objeto
          } else {
              return ResponseEntity.notFound().build(); // 404 - not found e montar estrutura vazio
