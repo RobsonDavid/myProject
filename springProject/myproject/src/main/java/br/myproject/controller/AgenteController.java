@@ -30,4 +30,7 @@ public class AgenteController {
         return lista;
     }
     
+    // findby
+    // data hora como string
+    // order by desc
 }

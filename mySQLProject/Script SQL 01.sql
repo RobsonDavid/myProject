@@ -19,6 +19,7 @@ update mtb310_usuario set racf = 'abc' where id = 6;
 
 
 alter table mtb310_usuario add column racf char(8) not null;
+alter table mtb310_usuario add column linkfoto varchar(300) ;
 
 SELECT * FROM myproject.mtb310_ag_financeiro order by  volume_transacional desc;
 

@@ -1,11 +1,16 @@
 package br.myproject.model;
 
+import java.util.List;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @Entity // será armanzenado no banco dados em uma tabela
 @Table(name = "mtb310_ag_financeiro") // ligar com tabela
@@ -23,6 +28,12 @@ public class Agente {
   
       @Column(name = "volume_financeiro",  nullable = false)
       private float volume;
+
+        // 1 Agente faz 1 Transações e um Agente tem vários Transações
+        @OneToMany(mappedBy = "mtb310_transaction")
+        // evitar looping - no JSON se estiver listando Transações não mostrar Agente duplicado
+        @JsonIgnoreProperties("mtb310_transaction")
+        private List<Transacao> transacoes;
 
 
       
