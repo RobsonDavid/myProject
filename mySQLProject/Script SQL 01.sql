@@ -29,5 +29,7 @@ SELECT
 FROM
     myproject.mtb310_transaction
 WHERE
-    ag_financeiro = 3
-GROUP BY status;
+    ag_financeiro = 5
+GROUP BY status order by status;
+
+delete from myproject.mtb310_transaction where status = 0 and ag_financeiro  =5;

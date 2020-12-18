@@ -21,16 +21,9 @@ create table mtb310_transaction(
 
 
 insert into mtb310_ag_financeiro values 
-    (null, 'MAGALU Financeira', 1231),
-    (null, 'SANTANDER Cartoes', 81212),
-    (null, 'ITAU/Uniclass Cards', 9912),
-    (null, 'SUBMARINO Cartoes',63421),
-    (null, 'HIPERCARD',98273),
-    (null, 'ITAU Virtual',12129),
-    (null, 'PICPAY Cartoes',812),
-    (null, 'SAMS CLUB Mastercard',965),
-    (null, 'EXTRA Cartoes VISA',112909),
-    (null, 'CARREFOUR Credito Master',191218);
+    (null, 'xxxS CLUB Mastercard',1),
+    (null, 'xxxRA Cartoes VISA',2),
+    (null, 'xxxEFOUR Credito Master',3);
     
     
     
